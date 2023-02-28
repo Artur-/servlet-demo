@@ -16,6 +16,9 @@ public class MyServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		PrintWriter writer = resp.getWriter();
 		writeLine(writer, "<pre>");
+		writeLine(writer, "Server name "+req.getServerName());
+		writeLine(writer, "Server info "+req.getServletContext().getServerInfo());
+		writeLine(writer, "");
 		writeLine(writer, "Request URI: " + req.getRequestURI());
 		writeLine(writer, "Request URL: " + req.getRequestURL());
 		writeLine(writer, "Request path info: " + req.getPathInfo());
